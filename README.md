@@ -44,3 +44,10 @@ Example
 	  </div>
 ```
 
+### Responsive Grid system
+* `.col`    => Extra small scale device
+* `.col-sm` => Small scale devices (>=576px)
+* `.col-md` => Medium scale devices (>=768px)
+* `.col-lg` => Large scale devices (>=992px)
+* `.col-xl` => eXtra Large Scale devices (>=1200px)
+
