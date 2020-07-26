@@ -51,3 +51,153 @@ Example
 * `.col-lg` => Large scale devices (>=992px)
 * `.col-xl` => eXtra Large Scale devices (>=1200px)
 
+### Tables
+*  `.table`   =>  Layout for table
+*  `.table-dark`
+*  `.table-bordered` 
+*  `.table-borderless` 
+*  `.thead-dark`
+*  `.thead-light`
+*  `.table-striped`
+*  `.table-hover`
+
+#### Attributes for table
+*   `colspan`
+*   `rowspan`
+*   `scope="col|group|colgroup|rowgroup"`
+#### Table-responsive-{breakpoint}
+*   `.table-responsive`
+*   `.table-responsive-sm`
+*   `.table-responsive-md`
+*   `.table-responsive-lg`
+
+Example:
+```
+	<!DOCTYPE html>
+<html>
+<head>
+	<title>:: Bootstrap Tables ::</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+	<div class="container mt-5">
+		<div class="table-responsive-md">
+			<table class="table  table-bordered  ">
+	<thead class="thead-dark">
+		<tr class="bg-primary">
+			<th scope="col">S.No</th>
+			<th>Continent</th>
+			<th>First_Name</th>
+			<th>Last_Name</th>
+			<th>Age</th>
+			<th colspan="2">Actions</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td scope="row">1</td>
+			<td rowspan="2">Non Asia</td>
+			<td>Warren</td>
+			<td>Buffet</td>
+			<td>69</td>
+			<td>Edit</td>
+			<td>Delete</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Jeff</td>
+			<td>Bezzos</td>
+			<td>65</td>
+			<td>Edit</td>
+			<td>Delete</td>
+		</tr>
+		<tr >
+			<td>3</td>
+			<td>Asia</td>
+			<td >Mukesh</td>
+			<td>Ambani</td>
+			<td>60</td>
+			<td>Edit</td>
+			<td>Delete</td>
+		</tr>
+	</tbody>
+	
+    </table>
+		</div>
+</div>
+
+</body>
+</html>
+```
+### Cards
+
+*  `.card`
+*  `.card-header`
+*  `.card-body`
+*  `.card-footer`
+*  `.card-img-top`
+*  `.card-title`
+*  `.card-subtitle`
+*  `.card-text`
+*  `.card-link`
+*  `.card-group`
+*  `.card-deck`
+
+Example:
+```
+	<!DOCTYPE html>
+<html>
+<head>
+	<title>:: Profile card ::</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<div class="container mt-5">
+	<div class="card-deck">
+	<div class="card" style="width:18rem;border: 1px solid lightgray;">
+		<img  class="card-img-top" src="images/admin.png">
+		<div class="card-body">
+			<h1 class="card-title">Kalyan Chakravarthi</h1>
+		<h3 class="card-subtitle">Software Developer</h3>
+		<p class="card-text">Working in APSSDC</p>
+		<button class="btn btn-primary"><a href="table.html" class="text-white">Click Me</a></button>
+		</div>
+	</div>
+	<div class="card" style="width:20rem;border: 1px solid lightgray;">
+		<img  class="card-img-top" src="images/admin.png">
+		<div class="card-body">
+			<h1 class="card-title">Kalyan Chakravarthi</h1>
+		<h3 class="card-subtitle">Software Developer</h3>
+		<p class="card-text">Working in APSSDC</p>
+		<button class="btn btn-primary"><a href="table.html" class="text-white">Click Me</a></button>
+		</div>
+	</div>
+	<div class="card" style="width:20rem;border: 1px solid lightgray;">
+		<img  class="card-img-top" src="images/admin.png">
+		<div class="card-body">
+			<h1 class="card-title">Kalyan Chakravarthi</h1>
+		<h3 class="card-subtitle">Software Developer</h3>
+		<p class="card-text">Working in APSSDC</p>
+		<button class="btn btn-primary"><a href="table.html" class="text-white">Click Me</a></button>
+		</div>
+	</div>
+	<div class="card" style="width:20rem;border: 1px solid lightgray;">
+		<img  class="card-img-top" src="images/admin.png">
+		<div class="card-body">
+			<h1 class="card-title">Kalyan Chakravarthi</h1>
+		<h3 class="card-subtitle">Software Developer</h3>
+		<p class="card-text">Working in APSSDC</p>
+		<button class="btn btn-primary"><a href="table.html" class="text-white">Click Me</a></button>
+		</div>
+	</div>
+
+	</div>
+</div>
+</body>
+</html>
+```
