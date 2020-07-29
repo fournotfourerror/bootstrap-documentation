@@ -201,3 +201,38 @@ Example:
 </body>
 </html>
 ```
+# JSON
+
++ JSON is Javascript Object Notation
++ Mainly we will use JSON to store data and interchange from the webapplications to servers
++ Extension for json file is .json
++ Data is in the form of key/value
++ Data shuold be separated by commas
+
+### Data types:
+===============
+
++ Number
++ String
++ Boolean
++ Object
++ Array
++ Null
+
+
+### XMLHttpRequest or fetch api
+
+
+# Fetch API
+   
+  + Fetch ()  method 
+  + then() method
+  + Response may be a text or blob or json
+  
+
+
+
+
+
+
+
