@@ -201,3 +201,77 @@ Example:
 </body>
 </html>
 ```
+
+
+# React
+
++ Node server
++ React is a library not a framework
++ React is a component based architecture
+##  Features of react
+=====================
+
++ React use JSX (It is not mandatory, but it is recomanded)
++ React uses virtualDOM( it enables to build applications fast)
++ One way data binding( props)
+
+###  Components:
+================
+ +  Functional Component(state less )
+ +  Class Component(state full)
+ +  Pure Component
+ +  Hybrid Component
+ 
+ 
+###  React.js environment setup
+===============================
+ + Approaches to create react application
+	  - Webpack and babel 
+	  - create-react-app command
+	 
+#### create-react-app:
+=====================
++ npm install create-react-app -g
+	- create-react-app projectname
++ npx create-react-app projectname 
+
+Error while creating project:
+=============================
+  + npm clean cache --force
+  + uninstall node 
+  + C:\Users\KalyanRam\AppData\Roaming
+  + delete npm and npm cache folder
+  + Reinstall node
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
