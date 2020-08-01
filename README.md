@@ -201,3 +201,33 @@ Example:
 </body>
 </html>
 ```
+
+
+# Components:
+=============
++ Function (stateless) component
++ class (statefull) component
+
+## var,let and const:
+===================
+ + Scope (Function or block)
+ + Redeclare
+ + Redefining
+ 
+## var:
+======
+ + var  scope is function
+ + var can be Redeclared
+ + var can be redfined
+
+## let:
+=======
++ let scope is block level
++ let can't redeclare
++ let can be redfined
+
+## const:
++ const scope is block level
++ const can't be redeclare
++ const can't redfined
+
