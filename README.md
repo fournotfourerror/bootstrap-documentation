@@ -201,3 +201,22 @@ Example:
 </body>
 </html>
 ```
+# Props(Properties)
+
++ Props is like arguments in function
++ Props can passed from parent component to child component(uni directional flow)
++ Props data is read only
+
+
+## Props with functional component
+
++ Union Banks -Main component
++ Andhra Bank  - Functional component
++ Corporation bank  - Class component
+
+
+# States
++ States are initialized and manazed by Component
++ By using series of constructor,super() method and state object
++ To update data in state object we will use setState() method
+
