@@ -72,7 +72,7 @@ Example
 *   `.table-responsive-lg`
 
 Example:
-```
+```html
 	<!DOCTYPE html>
 <html>
 <head>
@@ -147,7 +147,7 @@ Example:
 *  `.card-deck`
 
 Example:
-```
+```html
 	<!DOCTYPE html>
 <html>
 <head>
