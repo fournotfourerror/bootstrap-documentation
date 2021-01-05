@@ -200,4 +200,7 @@ Example:
 </div>
 </body>
 </html>
+
 ```
+
+https://www.pluralsight.com/guides/file-structure-react-applications-created-create-react-app
