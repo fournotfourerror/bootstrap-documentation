@@ -79,7 +79,68 @@ Example
 	  </div>
 ```
 
-By default each and every shell in the grid system occupies 1 grid as its width. 
+* Bootstrap grid system is calculated with 12 columns each and every column is having 1 grid of width.
+
+```html
+	<div class="row">
+		<div class="col-1"> </div>
+        </div>
+```
+
+We can change the width of each and every grid by mentioning the width. `col-2` is for representing column width with 2 grids.
+
+```html
+	<div class="row">
+   		<div class="col">
+      			1 of 3
+    		</div>
+    		<div class="col-6">
+      			2 of 3 (wider)
+    		</div>
+    		<div class="col">
+      			3 of 3
+    		</div>
+  	</div>
+
+  	<div class="row">
+    		<div class="col">
+      			1 of 3
+    		</div>
+    		<div class="col-5">
+      			2 of 3 (wider)
+    		</div>
+    		<div class="col">
+      			3 of 3
+    		</div>
+  	</div>
+```
+
+Use col-{breakpoint}-auto classes to size columns based on the natural width of their content.
+
+```html
+	<div class="row justify-content-md-center">
+    		<div class="col col-lg-2">
+      			1 of 3
+   		</div>
+    		<div class="col-md-auto">
+      			Variable width content
+    		</div>
+    		<div class="col col-lg-2">
+      			3 of 3
+    		</div>
+  	</div>
+  	<div class="row">
+    		<div class="col">
+      			1 of 3
+    		</div>
+    		<div class="col-md-auto">
+      			Variable width content
+    		</div>
+    		<div class="col col-lg-2">
+      			3 of 3
+    		</div>
+  	</div>
+```
 
 ### Responsive Grid system (_Break points_)
 * `.col`    => Extra small scale device
