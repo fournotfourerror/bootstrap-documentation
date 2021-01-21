@@ -1,8 +1,38 @@
-# bootstrap-documentation
-* CSS framework
-* Easy integration
-* Responsive web design
-* Browser Compatability
+# Bootstrap
+_Bootstrap is freely available for every. The main features of bootstrap is, it is very simple and easy to use, hug JavaScript plugins are available, easily design mobile friendly website._
+
+* Easy to use
+	* _Anybody with just basic knowledge of HTML and CSS can start using Bootstrap_
+
+* Responsive features
+	* _Bootstrap's responsive CSS adjusts to phones, tablets, and desktops_
+
+* Mobile-Friendly
+	* _Mobile-first approach: In Bootstrap 3, mobile-first styles are part of the core framework_
+
+* Simple Integration
+	* _Bootstrap can be simply integrated along with distinct other platforms and frameworks, on existing sites and new ones too and one more things you can also utilize particular elements of Bootstrap along with your current CSS._
+
+* Pre-styled Components
+	* _Bootstrap approaches with pre-styled components for alerts, dropdowns, nav bars, etc._
+
+* Customizable Bootstrap
+	* _The Bootstrap can be customized as per the designs of your project._
+
+* Browser compatibility
+	* _Bootstrap is compatible with all modern browsers (Chrome, Firefox, Internet Explorer, Safari, and Opera)_
+
+* Great grid system
+	* _Bootstrap is built on responsive 12-column grids, layouts and components. Whether you need a fixed grid or a responsive, it's only a matter of a few changes._
+
+* Extensive list of components
+	* _Whether you need drop down menus, pagination or alert boxes, Bootstrap has got your covered. Some of the components pre styled are; Dropdowns, Button Groups, Navigation Bar, Breadcrumbs, Labels & Badges, Alerts, Progress Bar, And many others._
+
+* Base styling for most HTML elements
+	* _A website has many different elements such as headings, lists, tables, buttons, forms, etc. The HTML elements for which styles are provided are; Typography Code, Tables, Forms, Buttons, Images, Icons_
+
+* Good documentation
+	* _Not only does Bootstrap offer styling for almost every element a typical website or web application requires, it also provides a great documentation with examples and demo that only make it more easier for even someone new._
 
 ### Color codes
 * `primary`   => Blue color
@@ -24,8 +54,13 @@ Example (Text color)
 ```
 
 ### Grid system
-* `row`
-* `col`
+
+_The Bootstrap Grid System is used for layout, specifically Responsive Layouts. ... The Grid is made up of groupings of Rows & Columns inside 1 or more Containers. The Bootstrap Grid can be used alone, without the Bootstrap JavaScript and other CSS Components. You just need to download and reference the “ bootstrap-grid._
+
+For implementing bootstrap grid system, we have to use following classes
+
+* `row` ( _For representing Rows_ )
+* `col` ( _For representing Columns_ )
 
 Example
 ```html
@@ -44,7 +79,9 @@ Example
 	  </div>
 ```
 
-### Responsive Grid system
+By default each and every shell in the grid system occupies 1 grid as its width. 
+
+### Responsive Grid system (_Break points_)
 * `.col`    => Extra small scale device
 * `.col-sm` => Small scale devices (>=576px)
 * `.col-md` => Medium scale devices (>=768px)
@@ -203,4 +240,3 @@ Example:
 
 ```
 
-https://www.pluralsight.com/guides/file-structure-react-applications-created-create-react-app
