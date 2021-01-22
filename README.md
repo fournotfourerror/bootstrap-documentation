@@ -44,13 +44,83 @@ _Bootstrap is freely available for every. The main features of bootstrap is, it 
 * `dark`      => Black color
 * `white`     => White color
 
-Example (Background color)
-```html
-    <h2 class="bg-primary"> Blue colored background for the text </h2>
+```scss
+	$theme-colors: (
+  	"primary":    $primary,
+  	"secondary":  $secondary,
+  	"success":    $success,
+  	"info":       $info,
+  	"warning":    $warning,
+  	"danger":     $danger,
+  	"light":      $light,
+  	"dark":       $dark
+	);
 ```
-Example (Text color)
+
+#### Background color
+* Easily set the background by using `.bg-*` color classes
+
 ```html
-    <h2 class="text-primary"> Blue colored text </h2>
+	<h2 class="bg-primary"> Blue colored background for the text </h2>
+	
+	<div class="bg-primary"></div>
+	<div class="bg-secondary"></div>
+	<div class="bg-success"></div>
+	<div class="bg-danger"></div>
+	<div class="bg-warning"></div>
+	<div class="bg-info"></div>
+	<div class="bg-light"></div>
+	<div class="bg-dark"></div>
+```
+
+#### Text color
+* Colorize text with color utilities.
+
+```html
+	<h2 class="text-primary"> Blue colored text </h2>
+
+	<p class="text-primary">.text-primary</p>
+	<p class="text-secondary">.text-secondary</p>
+	<p class="text-success">.text-success</p>
+	<p class="text-danger">.text-danger</p>
+	<p class="text-warning bg-dark">.text-warning</p>
+	<p class="text-info bg-dark">.text-info</p>
+	<p class="text-light bg-dark">.text-light</p>
+	<p class="text-dark">.text-dark</p>
+	<p class="text-body">.text-body</p>
+	<p class="text-muted">.text-muted</p>
+	<p class="text-white bg-dark">.text-white</p>
+	<p class="text-black-50">.text-black-50</p>
+	<p class="text-white-50 bg-dark">.text-white-50</p>
+	
+```
+
+#### Links
+* You can use the .link-* classes to colorize links. Unlike the .text-* classes, these classes have a :hover and :focus state.
+
+```html
+	<a href="#" class="link-primary">Primary link</a>
+	<a href="#" class="link-secondary">Secondary link</a>
+	<a href="#" class="link-success">Success link</a>
+	<a href="#" class="link-danger">Danger link</a>
+	<a href="#" class="link-warning">Warning link</a>
+	<a href="#" class="link-info">Info link</a>
+	<a href="#" class="link-light">Light link</a>
+	<a href="#" class="link-dark">Dark link</a>
+```
+
+#### Components
+* We also use theme colors as predefined colors for some components, for example, buttons.
+
+```html
+	<button type="button" class="btn btn-primary">Primary</button>
+	<button type="button" class="btn btn-secondary">Secondary</button>
+	<button type="button" class="btn btn-success">Success</button>
+	<button type="button" class="btn btn-danger">Danger</button>
+	<button type="button" class="btn btn-warning">Warning</button>
+	<button type="button" class="btn btn-info">Info</button>
+	<button type="button" class="btn btn-light">Light</button>
+	<button type="button" class="btn btn-dark">Dark</button>
 ```
 
 ### Grid system
@@ -142,7 +212,7 @@ Use col-{breakpoint}-auto classes to size columns based on the natural width of 
   	</div>
 ```
 
-### Responsive Grid system (_Break points_)
+#### Responsive Grid system (_Break points_)
 
 By using breakpoints, we can make the grid system as responsive, we can access the grid system in various screen resolutions. We have different classes for different screen resolutions.
 
@@ -287,73 +357,109 @@ We can style the HTML tables by using bootstrap predefined classes. The followin
 *   `rowspan`
 *   `scope="col|group|colgroup|rowgroup"`
 #### Table-responsive-{breakpoint}
+
+We can make the tables as responsive by applying the follwoing class names for the parent element of the tables. We have to create a parent element for the table. 
 *   `.table-responsive`
 *   `.table-responsive-sm`
 *   `.table-responsive-md`
 *   `.table-responsive-lg`
 
+```html
+	<div class="table-responsive">
+		<table class="table">
+  			<thead>
+    				<tr>
+      					<th scope="col">#</th>
+      					<th scope="col">First Name</th>
+      					<th scope="col">Last Name</th>
+      					<th scope="col">Role</th>
+    				</tr>
+  			</thead>
+		
+  			<tbody>
+    				<tr class="table-active">
+      					<th scope="row">1</th>
+      					<td>Hanuman</td>
+      					<td>Kumar</td>
+      					<td>Multi-skill Trainer</td>
+    				</tr>
+    				<tr>
+      					<th scope="row">2</th>
+      					<td>Rajesh</td>
+      					<td>Nalleboina</td>
+      					<td>Multi-skill Trainer</td>
+    				</tr>
+   			 	<tr>
+      					<th scope="row">3</th>
+      					<td colspan="2" class="table-active">Swamy kankipati</td>
+      					<td>Multi-skill Trainer</td>
+    				</tr>
+  			</tbody>
+		</table>
+	</div>
+```
+
 Example:
 ```html
 	<!DOCTYPE html>
-<html>
-<head>
-	<title>:: Bootstrap Tables ::</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-</head>
-<body>
-	<div class="container mt-5">
-		<div class="table-responsive-md">
-			<table class="table  table-bordered  ">
-	<thead class="thead-dark">
-		<tr class="bg-primary">
-			<th scope="col">S.No</th>
-			<th>Continent</th>
-			<th>First_Name</th>
-			<th>Last_Name</th>
-			<th>Age</th>
-			<th colspan="2">Actions</th>
-			
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td scope="row">1</td>
-			<td rowspan="2">Non Asia</td>
-			<td>Warren</td>
-			<td>Buffet</td>
-			<td>69</td>
-			<td>Edit</td>
-			<td>Delete</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>Jeff</td>
-			<td>Bezzos</td>
-			<td>65</td>
-			<td>Edit</td>
-			<td>Delete</td>
-		</tr>
-		<tr >
-			<td>3</td>
-			<td>Asia</td>
-			<td >Mukesh</td>
-			<td>Ambani</td>
-			<td>60</td>
-			<td>Edit</td>
-			<td>Delete</td>
-		</tr>
-	</tbody>
-	
-    </table>
-		</div>
-</div>
-
-</body>
-</html>
+	<html>
+		<head>
+			<title>:: Bootstrap Tables ::</title>
+			<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+			<script type="text/javascript" src="js/bootstrap.min.js"></script>
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+		</head>
+		<body>
+			<div class="container mt-5">
+				<div class="table-responsive-md">
+					<table class="table  table-bordered  ">
+						<thead class="thead-dark">
+							<tr class="bg-primary">
+								<th scope="col">S.No</th>
+								<th>Continent</th>
+								<th>First_Name</th>
+								<th>Last_Name</th>
+								<th>Age</th>
+								<th colspan="2">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td scope="row">1</td>
+								<td rowspan="2">Non Asia</td>
+								<td>Warren</td>
+								<td>Buffet</td>
+								<td>69</td>
+								<td>Edit</td>
+								<td>Delete</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Jeff</td>
+								<td>Bezzos</td>
+								<td>65</td>
+								<td>Edit</td>
+								<td>Delete</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Asia</td>
+								<td >Mukesh</td>
+								<td>Ambani</td>
+								<td>60</td>
+								<td>Edit</td>
+								<td>Delete</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</body>
+	</html>
 ```
 ### Cards
+
+A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. For making a layout or division as a card, we have to use following class names
 
 *  `.card`
 *  `.card-header`
@@ -367,60 +473,168 @@ Example:
 *  `.card-group`
 *  `.card-deck`
 
+Basically a card container divided into three parts `card-header`, `card-body` and `card-footer`.
+
+```html
+	<div class="card"> 
+		<div class="card-header"> Header </div>
+		<div class="card-body"> Body </div>
+		<div class="card-footer"> </div>
+	</div>
+```
+
+We can apply styles to the content inside the `card-body` by using the classes `card-title`, `card-subtitle`, `card-text`, `card-img`, `card-link` and `card-group`.
+
+```html
+	<div class="card-body">
+		<h1 class="card-title"> Title text </h1>
+		<p class="card-text"> Card content </p>
+	</div>
+```
+
 Example:
 ```html
 	<!DOCTYPE html>
-<html>
-<head>
-	<title>:: Profile card ::</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-</head>
-<body>
-<div class="container mt-5">
-	<div class="card-deck">
-	<div class="card" style="width:18rem;border: 1px solid lightgray;">
-		<img  class="card-img-top" src="images/admin.png">
-		<div class="card-body">
-			<h1 class="card-title">Kalyan Chakravarthi</h1>
-		<h3 class="card-subtitle">Software Developer</h3>
-		<p class="card-text">Working in APSSDC</p>
-		<button class="btn btn-primary"><a href="table.html" class="text-white">Click Me</a></button>
-		</div>
-	</div>
-	<div class="card" style="width:20rem;border: 1px solid lightgray;">
-		<img  class="card-img-top" src="images/admin.png">
-		<div class="card-body">
-			<h1 class="card-title">Kalyan Chakravarthi</h1>
-		<h3 class="card-subtitle">Software Developer</h3>
-		<p class="card-text">Working in APSSDC</p>
-		<button class="btn btn-primary"><a href="table.html" class="text-white">Click Me</a></button>
-		</div>
-	</div>
-	<div class="card" style="width:20rem;border: 1px solid lightgray;">
-		<img  class="card-img-top" src="images/admin.png">
-		<div class="card-body">
-			<h1 class="card-title">Kalyan Chakravarthi</h1>
-		<h3 class="card-subtitle">Software Developer</h3>
-		<p class="card-text">Working in APSSDC</p>
-		<button class="btn btn-primary"><a href="table.html" class="text-white">Click Me</a></button>
-		</div>
-	</div>
-	<div class="card" style="width:20rem;border: 1px solid lightgray;">
-		<img  class="card-img-top" src="images/admin.png">
-		<div class="card-body">
-			<h1 class="card-title">Kalyan Chakravarthi</h1>
-		<h3 class="card-subtitle">Software Developer</h3>
-		<p class="card-text">Working in APSSDC</p>
-		<button class="btn btn-primary"><a href="table.html" class="text-white">Click Me</a></button>
-		</div>
-	</div>
-
-	</div>
-</div>
-</body>
-</html>
-
+	<html>
+		<head>
+			<title>:: Profile card ::</title>
+			<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+			<script type="text/javascript" src="js/bootstrap.min.js"></script>
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+		</head>
+		<body>
+			<div class="container mt-5">
+				<div class="card-deck">
+					<div class="card" style="width:18rem;border: 1px solid lightgray;">
+						<img  class="card-img-top" src="images/admin.png">
+						<div class="card-body">
+							<h1 class="card-title">Kalyan Chakravarthi</h1>
+							<h3 class="card-subtitle">Software Developer</h3>
+							<p class="card-text">Working in APSSDC</p>
+							<button class="btn btn-primary"><a href="table.html" class="text-white">Click Me</a></button>
+						</div>
+					</div>
+					
+					<div class="card" style="width:20rem;border: 1px solid lightgray;">
+						<img  class="card-img-top" src="images/admin.png">
+						<div class="card-body">
+							<h1 class="card-title">Kalyan Chakravarthi</h1>
+							<h3 class="card-subtitle">Software Developer</h3>
+							<p class="card-text">Working in APSSDC</p>
+							<button class="btn btn-primary"><a href="table.html" class="text-white">Click Me</a></button>
+						</div>
+					</div>
+					<div class="card" style="width:20rem;border: 1px solid lightgray;">
+						<img  class="card-img-top" src="images/admin.png">
+						<div class="card-body">
+							<h1 class="card-title">Kalyan Chakravarthi</h1>
+							<h3 class="card-subtitle">Software Developer</h3>
+							<p class="card-text">Working in APSSDC</p>
+							<button class="btn btn-primary"><a href="table.html" class="text-white">Click Me</a></button>
+						</div>
+					</div>
+					<div class="card" style="width:20rem;border: 1px solid lightgray;">
+						<img  class="card-img-top" src="images/admin.png">
+						<div class="card-body">
+						<h1 class="card-title">Kalyan Chakravarthi</h1>
+						<h3 class="card-subtitle">Software Developer</h3>
+						<p class="card-text">Working in APSSDC</p>
+						<button class="btn btn-primary"><a href="table.html" class="text-white">Click Me</a></button>
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>
 ```
+
+### Bootstrap forms
+
+* Textual form controls—like <input>s, <select>s, and <textarea>s—are styled with the .form-control class. Included are styles for general appearance, focus state, sizing, and more.
+
+```html
+	<form>
+  		<div class="form-group">
+    			<label for="exampleFormControlInput1">Email address</label>
+    			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  		</div>
+  		<div class="form-group">
+    			<label for="exampleFormControlSelect1">Example select</label>
+    			<select class="form-control" id="exampleFormControlSelect1">
+      				<option>1</option>
+      				<option>2</option>
+      				<option>3</option>
+      				<option>4</option>
+      				<option>5</option>
+    			</select>
+  		</div>
+  		<div class="form-group">
+    			<label for="exampleFormControlSelect2">Example multiple select</label>
+    			<select multiple class="form-control" id="exampleFormControlSelect2">
+      				<option>1</option>
+      				<option>2</option>
+      				<option>3</option>
+      				<option>4</option>
+      				<option>5</option>
+    			</select>
+  		</div>
+  		<div class="form-group">
+    			<label for="exampleFormControlTextarea1">Example textarea</label>
+    			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  		</div>
+</form>
+```
+
+#### File-input
+
+```html
+	<form>
+  		<div class="form-group">
+    		<label for="exampleFormControlFile1">Example file input</label>
+    		<input type="file" class="form-control-file" id="exampleFormControlFile1">
+  		</div>
+	</form>
+```
+
+* Set heights using classes like `.form-control-lg` and `.form-control-sm`.
+* Add the readonly boolean attribute on an input to prevent modification of the input’s value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.
+
+```html
+	<input class="form-control" type="text" placeholder="Readonly input here..." readonly>
+```
+
+#### Range
+* Set horizontally scrollable range inputs using `.form-control-range`.
+
+```html
+	<form>
+  		<div class="form-group">
+    			<label for="formControlRange">Example Range input</label>
+    			<input type="range" class="form-control-range" id="formControlRange">
+  		</div>
+	</form>
+```
+
+#### Checkboxes & Radios
+* Default checkboxes and radios are improved upon with the help of .form-check, a single class for both input types that improves the layout and behavior of their HTML elements. * Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
+* Disabled checkboxes and radios are supported. The disabled attribute will apply a lighter color to help indicate the input’s state.
+* Checkboxes and radios use are built to support HTML-based form validation and provide concise, accessible labels. As such, our <input>s and <label>s are sibling elements as opposed to an <input> within a <label>. This is slightly more verbose as you must specify id and for attributes to relate the <input> and <label>.
+
+```html
+	<div class="form-check">
+  		<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  		<label class="form-check-label" for="defaultCheck1">
+    			Default checkbox
+  		</label>
+	</div>
+	<div class="form-check">
+  		<input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+  		<label class="form-check-label" for="defaultCheck2">
+    			Disabled checkbox
+  		</label>
+	</div>
+```
+#### Alerts
+
+
+
 
