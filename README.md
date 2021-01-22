@@ -549,7 +549,7 @@ Example:
 
 ### Bootstrap forms
 
-* Textual form controls—like <input>s, <select>s, and <textarea>s—are styled with the .form-control class. Included are styles for general appearance, focus state, sizing, and more.
+* Textual form controls like `<input>`s, `<select>`s, and `<textarea>`s are styled with the `.form-control` class. Included are styles for general appearance, focus state, sizing, and more.
 
 
 ```html
@@ -582,7 +582,7 @@ Example:
     			<label for="exampleFormControlTextarea1">Example textarea</label>
     			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   		</div>
-</form>
+	</form>
 ```
 
 #### File-input
