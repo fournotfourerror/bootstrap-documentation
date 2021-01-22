@@ -143,21 +143,144 @@ Use col-{breakpoint}-auto classes to size columns based on the natural width of 
 ```
 
 ### Responsive Grid system (_Break points_)
+
+By using breakpoints, we can make the grid system as responsive, we can access the grid system in various screen resolutions. We have different classes for different screen resolutions.
+
 * `.col`    => Extra small scale device
 * `.col-sm` => Small scale devices (>=576px)
 * `.col-md` => Medium scale devices (>=768px)
 * `.col-lg` => Large scale devices (>=992px)
 * `.col-xl` => eXtra Large Scale devices (>=1200px)
 
+Example
+
+```html
+	<!-- Row 1 -->
+	<div class="row justify-content-center">
+		<div class="col-md-6 col-sm-12- col-lg-4 "> 
+			Row-1 Col-1 
+		</div>
+		
+		<div class="col-md-6 col-sm-12- col-lg-4 "> 
+			Row-1 Col-1 
+		</div>
+	</div>
+	
+	<!-- Row 2 -->
+	<div class="row justify-content-center">
+		<div class="col-md-6 col-sm-12- col-lg-4 "> 
+			Row-2 Col-1 
+		</div>
+		
+		<div class="col-md-6 col-sm-12- col-lg-4 "> 
+			Row-2 Col-1 
+		</div>
+	</div>
+```
+
+From the above example, we used two rows, each and every row is having two columns in it. We used various class names for providing responsiveness for every column. `col-md` is for medium scale devices (Smart phones), `col-sm` is for small-scale devices (Old moto e series mobiles), `col-lg` is for large-scale devices (Desktops)
+
 ### Tables
-*  `.table`   =>  Layout for table
+
+We can style the HTML tables by using bootstrap predefined classes. The following are the availables classes for styling tables.
+
+*  `.table`
 *  `.table-dark`
+	* We can provide dark background for table and table-row.
+
+```html
+	<tr class="table-dark">
+      		<th scope="row">Dark</th>
+      		<td>Cell</td>
+      		<td>Cell</td>
+    	</tr>
+```
 *  `.table-bordered` 
-*  `.table-borderless` 
+	* _Add **.table-bordered** for borders on all sides of the table and cells._
+
+```html
+	<table class="table table-bordered"></table>
+```
+
+*  `.table-borderless`
+	* _Add **.table-borderless** for generating borderless table._
+
 *  `.thead-dark`
 *  `.thead-light`
+*  `.table-active`
+	* _Highlight a table row or cell by adding a .table-active class._
+
+```html
+	<table class="table">
+  		<thead>
+    			<tr>
+      				<th scope="col">#</th>
+      				<th scope="col">First Name</th>
+      				<th scope="col">Last Name</th>
+      				<th scope="col">Role</th>
+    			</tr>
+  		</thead>
+		
+  		<tbody>
+    			<tr class="table-active">
+      				<th scope="row">1</th>
+      				<td>Hanuman</td>
+      				<td>Kumar</td>
+      				<td>Multi-skill Trainer</td>
+    			</tr>
+    			<tr>
+      				<th scope="row">2</th>
+      				<td>Rajesh</td>
+      				<td>Nalleboina</td>
+      				<td>Multi-skill Trainer</td>
+    			</tr>
+   			 <tr>
+      				<th scope="row">3</th>
+      				<td colspan="2" class="table-active">Swamy kankipati</td>
+      				<td>Multi-skill Trainer</td>
+    			</tr>
+  		</tbody>
+	</table>
+
+```
+
 *  `.table-striped`
+	* _Use **.table-striped** to add zebra-striping to any table row within the `<tbody>`._
+
+```html
+	<table class="table table-striped"></table>
+```
+
 *  `.table-hover`
+	* _We can observe the background color of each and every row when we are goind to hover it._
+	
+```html
+	<table class="table table-striped table-hover"></table>
+```
+
+* Add `.table-sm` to make any .table more compact by cutting all cell padding in half.
+
+```html
+	<table class="table table-sm"></table>
+```
+* Border styles, active styles, and table variants are not inherited by nested tables.
+	* _To prevent any styles from leaking to nested tables, we use the child combinator (>) selector in our CSS. Since we need to target all the tds and ths in the thead, tbody, and tfoot, our selector would look pretty long without it. As such, we use the rather odd looking .table > :not(caption) > * > * selector to target all tds and ths of the .table, but none of any potential nested tables._
+
+	* _Note that if you add <tr>s as direct children of a table, those <tr> will be wrapped in a <tbody> by default, thus making our selectors work as intended._
+
+```html
+	<table class="table table-striped">
+  		<thead></thead>
+  		<tbody>
+    			<tr>
+      				<td colspan="4">
+        				<table class="table mb-0"></table>
+      				</td>
+    			</tr>
+  		</tbody>
+	</table>
+```
+
 
 #### Attributes for table
 *   `colspan`
