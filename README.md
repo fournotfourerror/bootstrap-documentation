@@ -1,5 +1,9 @@
 # Bootstrap
+_____
 _Bootstrap is freely available for every. The main features of bootstrap is, it is very simple and easy to use, hug JavaScript plugins are available, easily design mobile friendly website._
+
+### Features
+____
 
 * Easy to use
 	* _Anybody with just basic knowledge of HTML and CSS can start using Bootstrap_
@@ -34,7 +38,17 @@ _Bootstrap is freely available for every. The main features of bootstrap is, it 
 * Good documentation
 	* _Not only does Bootstrap offer styling for almost every element a typical website or web application requires, it also provides a great documentation with examples and demo that only make it more easier for even someone new._
 
+### How to integrate bootstrap to our project
+* We can download bootstrap from [www.getbootstrap.com](www.getbootstrap.com)
+* If you wanto run the bootstrap from online, we can use `CDN` and `JSDelivr`
+* When we are going to use `CDN` and `JSDelivr` , we need to have internet connectivity whenever we are going to run our project.
+* We can use either bootstrap files for offline or `CDN` and `JSDelivr` but we need to use the source files in head section of HTML document.
+
 ### Color codes
+_____
+
+Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too. We have various color codes in bootstrap. The following codes describes the color codes along with the colors.
+
 * `primary`   => Blue color
 * `secondary` => Grey color (Light black color)
 * `info`      => Sky blue color
@@ -124,6 +138,7 @@ _Bootstrap is freely available for every. The main features of bootstrap is, it 
 ```
 
 ### Grid system
+_____
 
 _The Bootstrap Grid System is used for layout, specifically Responsive Layouts. ... The Grid is made up of groupings of Rows & Columns inside 1 or more Containers. The Bootstrap Grid can be used alone, without the Bootstrap JavaScript and other CSS Components. You just need to download and reference the “ bootstrap-grid._
 
@@ -251,6 +266,7 @@ Example
 From the above example, we used two rows, each and every row is having two columns in it. We used various class names for providing responsiveness for every column. `col-md` is for medium scale devices (Smart phones), `col-sm` is for small-scale devices (Old moto e series mobiles), `col-lg` is for large-scale devices (Desktops)
 
 ### Tables
+_____
 
 We can style the HTML tables by using bootstrap predefined classes. The following are the availables classes for styling tables.
 
@@ -458,6 +474,7 @@ Example:
 	</html>
 ```
 ### Cards
+_____
 
 A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. For making a layout or division as a card, we have to use following class names
 
@@ -548,6 +565,7 @@ Example:
 ```
 
 ### Bootstrap forms
+_____
 
 * Textual form controls like `<input>`s, `<select>`s, and `<textarea>`s are styled with the `.form-control` class. Included are styles for general appearance, focus state, sizing, and more.
 
@@ -634,8 +652,58 @@ Example:
   		</label>
 	</div>
 ```
-#### Alerts
+### Alerts
+_____
 
+* Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight required contextual classes ( `.alert-success` ).
 
+```html
+	<div class="alert alert-secondary" role="alert">
+  		This is a secondary alert—check it out!
+	</div>
+	<div class="alert alert-success" role="alert">
+  		This is a success alert—check it out!
+	</div>
+```
 
+#### Alert-links
+* Use the `.alert-link` utility class to quickly provide matching colored links within any alert.
+
+```html
+	<div class="alert alert-danger" role="alert">
+  		This is a danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+	</div>
+	<div class="alert alert-warning" role="alert">
+ 		 This is a warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+	</div>
+```
+
+#### Alert-content
+```html
+	<div class="alert alert-success" role="alert">
+  		<h4 class="alert-heading">Well done!</h4>
+  		<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  		<hr>
+  		<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+	</div>
+```
+
+#### Dismissible alerts
+Using the alert JavaScript plugin, it’s possible to dismiss any alert inline. Here’s how:
+	* Be sure you’ve loaded the alert plugin, or the compiled Bootstrap JavaScript.
+	* If you’re building our JavaScript from source, it requires util.js. The compiled version includes this.
+	* Add a dismiss button and the .alert-dismissible class, which adds extra padding to the right of the alert and positions the .close button.
+	* On the dismiss button, add the data-dismiss="alert" attribute, which triggers the JavaScript functionality. Be sure to use the <button> element with it for proper behavior across all devices.
+	* To animate alerts when dismissing them, be sure to add the .fade and .show classes.
+	
+```html
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  		<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    			<span aria-hidden="true">&times;</span>
+  		</button>
+	</div>
+```
+
+By using above code snippet, we can provide closing button for dismissing the alert. But we have to include `bootstrap.min.js` in head section of HTML document.
 
